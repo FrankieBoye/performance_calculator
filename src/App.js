@@ -8,8 +8,7 @@ class App extends Component {
 drivetrain = (e) => {
   this.setState({
     drivetrain: e.target.value,
-  })
-  console.log(e.target.value)
+  },()=>console.log(this.state.drivetrain));
 }
 
   render() {
