@@ -15,3 +15,7 @@ code {
   color: black;
   font-size: 30px;
 }
+
+label {
+    font: normal 14px courier;
+}
