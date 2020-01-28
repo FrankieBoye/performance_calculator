@@ -30,9 +30,17 @@ drivetrain = (e) => {
   }
 
   calculate() {
-    var x = (1000/this.state.weight)*this.state.bhp
-    alert(x.toFixed())
+    var x = 0
+      if(this.state.drivetrain=='RWD') x=+0.17
+      if(this.state.drivetrain=='FWD') x=+0.69
+      if(this.state.drivetrain=='AWD') x=-0.39
+
+    var y = (this.state.weight / (this.state.bhp * 0.8))+x
+    alert(y.toFixed(1))
   }
+
+  // (1000/this.state.weight)*this.state.bhp = bhp per tonne
+  // this.state.weight / (this.state.bhp * 0.8) = 0-60 time in seconds
 
   render() {
     return (
