@@ -6,7 +6,7 @@ class App extends Component {
     this.state = {
     drivetrain: '',
     weight: '',
-    bhp: ''
+    bhp: '',
   }
   this.calculate = this.calculate.bind(this);
 }
@@ -31,12 +31,15 @@ drivetrain = (e) => {
 
   calculate() {
     var x = 0
-      if(this.state.drivetrain=='RWD') x=+0.17
-      if(this.state.drivetrain=='FWD') x=+0.69
-      if(this.state.drivetrain=='AWD') x=-0.39
+      if(this.state.drivetrain==='RWD') x=+0.17
+      if(this.state.drivetrain==='FWD') x=+0.69
+      if(this.state.drivetrain==='AWD') x=-0.39
 
-    var y = (this.state.weight / (this.state.bhp * 0.8))+x
-    alert(y.toFixed(1))
+    var y = ((this.state.weight / (this.state.bhp * 0.8))+x).toFixed(1)
+    if(isNaN(y)) return 0
+    if(y == Infinity) return 0
+    return y
+    console.log(y)
   }
 
   // (1000/this.state.weight)*this.state.bhp = bhp per tonne
@@ -58,8 +61,7 @@ drivetrain = (e) => {
           <label>BHP:</label>
             <input type="number" value={this.state.value} onChange={this.bhp} />
       </form>
-
-      <button onClick={this.calculate} value="calculate">calculate</button>
+      <div>0-60 = {this.calculate()} seconds</div>
       </div>
 
     );
