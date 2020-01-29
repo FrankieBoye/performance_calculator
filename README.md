@@ -24,6 +24,13 @@ Work in progress!
 
 I have met my MVP and can calculate the 0-60 time!
 
+There is still plenty of work to do.<br>
+1. Tests have to be written for the code.
+
+2. I need to find some way of highlighting the selected drivetrain button using the buttons state.
+
+3. I need to come up with formulas to calculate my other performance criteria.
+
 ## Deployment
 
 The application will be deployed on Heroku.

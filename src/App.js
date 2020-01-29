@@ -36,8 +36,8 @@ drivetrain = (e) => {
       if(this.state.drivetrain==='AWD') x=-0.39
 
     var y = ((this.state.weight / (this.state.bhp * 0.8))+x).toFixed(1)
-    if(isNaN(y)) return 0
-    if(y == Infinity) return 0
+    if(isNaN(y)) return '---'
+    if(y == Infinity) return '---'
     return y
     console.log(y)
   }
