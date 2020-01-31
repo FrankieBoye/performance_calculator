@@ -19,3 +19,9 @@ code {
 label {
     font: normal 14px courier;
 }
+
+.btn{
+    background: ;
+} .btn:focus{
+    background: red;
+} 

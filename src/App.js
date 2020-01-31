@@ -50,9 +50,9 @@ drivetrain = (e) => {
       <div
       className="header">
       <h1>Performance Calculator</h1>
-      <button onClick={this.drivetrain} value="RWD">RWD</button>
-      <button onClick={this.drivetrain} value="FWD">FWD</button>
-      <button onClick={this.drivetrain} value="AWD">AWD</button>
+      <button onClick={this.drivetrain} class="btn" value="RWD">RWD</button>
+      <button onClick={this.drivetrain} class="btn" value="FWD">FWD</button>
+      <button onClick={this.drivetrain} class="btn" value="AWD">AWD</button>
 
      <form>
         <label>weight:</label>
@@ -61,6 +61,7 @@ drivetrain = (e) => {
           <label>BHP:</label>
             <input type="number" value={this.state.value} onChange={this.bhp} />
       </form>
+      <br></br>
       <div>0-60 = {this.calculate()} seconds</div>
       </div>
 
