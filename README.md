@@ -18,7 +18,7 @@ When the app is completed, you will be able to select the driven wheels for your
 
 Work in progress!
 
-![image](https://user-images.githubusercontent.com/44870179/73573484-5cf57100-446b-11ea-903c-412c30120ae5.png)
+![image](https://user-images.githubusercontent.com/44870179/73613234-74f3fe80-45eb-11ea-8787-27d636c7e15f.png)
 
 #### Update
 
@@ -27,9 +27,7 @@ I have met my MVP and can calculate the 0-60 time!
 There is still plenty of work to do.<br>
 1. Tests have to be written for the code.
 
-2. I need to find some way of permanently highlighting the selected drivetrain button using the buttons state. Currently when the focus changes to type in weight or bhp, the highlight disappears.
-
-3. I need to come up with formulas to calculate my other performance criteria.
+2. I need to come up with formulas to calculate my other performance criteria.
 
 ## Deployment
 

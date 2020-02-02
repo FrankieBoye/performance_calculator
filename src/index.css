@@ -20,8 +20,10 @@ label {
     font: normal 14px courier;
 }
 
-.btn{
-    background: ;
-} .btn:focus{
-    background: red;
-} 
+ul li { display:block; float:left; }
+.active { background:skyblue;
+  background-image: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
