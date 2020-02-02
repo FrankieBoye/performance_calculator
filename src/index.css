@@ -20,7 +20,6 @@ label {
     font: normal 14px courier;
 }
 
-ul li { display:block; float:left; }
 .active { background:skyblue;
   background-image: none;
   outline: none;
