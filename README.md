@@ -18,7 +18,7 @@ When the app is completed, you will be able to select the driven wheels for your
 
 Work in progress!
 
-![image](https://user-images.githubusercontent.com/44870179/73613234-74f3fe80-45eb-11ea-8787-27d636c7e15f.png)
+![image](https://user-images.githubusercontent.com/44870179/73695838-db078100-46d2-11ea-9212-b4a7171c6c38.png)
 
 #### Update
 
