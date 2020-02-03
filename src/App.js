@@ -15,19 +15,19 @@ class App extends Component {
 drivetrain = (e) => {
   this.setState({
     drivetrain: e.target.value,
-  },()=>console.log(this.state.drivetrain));
+  });
 }
 
   weight = (e) => {
     this.setState({
       weight: e.target.value,
-    },()=>console.log(this.state.weight));
+    });
   }
 
   bhp = (e) => {
     this.setState({
       bhp: e.target.value,
-    },()=>console.log(this.state.bhp));
+    });
   }
 
   calculate0to60() {
@@ -40,7 +40,6 @@ drivetrain = (e) => {
     if(isNaN(y)) return '---'
     if(y == Infinity) return '---'
     return y
-    console.log(y)
   }
 
   calculate0to100() {
@@ -53,11 +52,15 @@ drivetrain = (e) => {
     if(isNaN(y)) return '---'
     if(y == Infinity) return '---'
     return y
-    console.log(y)
   }
 
-  // (1000/this.state.weight)*this.state.bhp = bhp per tonne
-  // this.state.weight / (this.state.bhp * 0.8) = 0-60 time in seconds
+  quarterMile(){
+    var x = ((1000/this.state.weight)*this.state.bhp).toFixed()
+    if(isNaN(x)) return '---'
+    if(x == Infinity) return '---'
+    if(x<107) return "18+"
+    if(x<120) return "17+"
+  }
 
   render() {
     return (
@@ -78,6 +81,7 @@ drivetrain = (e) => {
       <br></br>
       <div>0-60 = {this.calculate0to60()} seconds</div>
       <div>0-100 = {this.calculate0to100()} seconds</div>
+      <div>quarter mile in {this.quarterMile()} seconds </div>
       </div>
 
     );
