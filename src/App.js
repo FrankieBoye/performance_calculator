@@ -58,8 +58,15 @@ drivetrain = (e) => {
     var x = ((1000/this.state.weight)*this.state.bhp).toFixed()
     if(isNaN(x)) return '---'
     if(x == Infinity) return '---'
-    if(x<107) return "18+"
-    if(x<120) return "17+"
+    if(x<107) return "18+ range"
+    if(x<120) return "17's"
+    if(x<137) return "16's"
+    if(x<160) return "15's"
+    if(x<190) return "14's"
+    if(x<190) return "13's"
+    if(x<340) return "12's"
+    if(x<550) return "11's"
+    if(x<820) return "10's!!"
   }
 
   render() {
@@ -81,7 +88,7 @@ drivetrain = (e) => {
       <br></br>
       <div>0-60 = {this.calculate0to60()} seconds</div>
       <div>0-100 = {this.calculate0to100()} seconds</div>
-      <div>quarter mile in {this.quarterMile()} seconds </div>
+      <div>quarter mile in the {this.quarterMile()} </div>
       </div>
 
     );
