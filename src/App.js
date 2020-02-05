@@ -3,13 +3,15 @@ import React, {Component} from 'react';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.initialState = {
     drivetrain: '',
     weight: '',
     bhp: '',
   }
+  this.state = this.initialState
   this.calculate0to60 = this.calculate0to60.bind(this);
   this.calculate0to100 = this.calculate0to100.bind(this);
+  this.reset = this.reset.bind(this);
 }
 
 drivetrain = (e) => {
@@ -63,10 +65,17 @@ drivetrain = (e) => {
     if(x<137) return "16's"
     if(x<160) return "15's"
     if(x<190) return "14's"
-    if(x<190) return "13's"
+    if(x<250) return "13's"
     if(x<340) return "12's"
     if(x<550) return "11's"
     if(x<820) return "10's!!"
+  }
+
+  reset(){
+    document.getElementById("calculator").reset();
+    // this.setState(this.initialState);
+    this.setState({ weight: '' })
+    this.setState({ bhp: '' })
   }
 
   render() {
@@ -78,12 +87,13 @@ drivetrain = (e) => {
       <input type="button" onClick={this.drivetrain} value="FWD"/>
       <input type="button" onClick={this.drivetrain} value="AWD"/>
 
-     <form>
+     <form id ="calculator">
         <label>weight:</label>
           <input type="number" value={this.state.value} onChange={this.weight} />
 
           <label>BHP:</label>
             <input type="number" value={this.state.value} onChange={this.bhp} />
+             <button type="button" onClick={this.reset}>Reset</button>
       </form>
       <br></br>
       <div>0-60 = {this.calculate0to60()} seconds</div>
