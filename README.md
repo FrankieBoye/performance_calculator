@@ -18,7 +18,7 @@ When the app is completed, you will be able to select the driven wheels for your
 
 Work in progress!
 
-![image](https://user-images.githubusercontent.com/44870179/73695838-db078100-46d2-11ea-9212-b4a7171c6c38.png)
+![image](https://user-images.githubusercontent.com/44870179/73846707-e1097900-481c-11ea-84d1-dec2270a987b.png)
 
 #### Update
 
@@ -28,6 +28,8 @@ There is still plenty of work to do.<br>
 1. Tests have to be written for the code.
 
 2. I need to come up with formulas to calculate my other performance criteria.
+
+3. Formatting, fonts and general layout need work.
 
 ## Deployment
 

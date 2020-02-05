@@ -3,12 +3,11 @@ import React, {Component} from 'react';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.initialState = {
+    this.state = {
     drivetrain: '',
     weight: '',
     bhp: '',
   }
-  this.state = this.initialState
   this.calculate0to60 = this.calculate0to60.bind(this);
   this.calculate0to100 = this.calculate0to100.bind(this);
   this.reset = this.reset.bind(this);
@@ -73,7 +72,6 @@ drivetrain = (e) => {
 
   reset(){
     document.getElementById("calculator").reset();
-    // this.setState(this.initialState);
     this.setState({ weight: '' })
     this.setState({ bhp: '' })
   }
@@ -93,12 +91,12 @@ drivetrain = (e) => {
 
           <label>BHP:</label>
             <input type="number" value={this.state.value} onChange={this.bhp} />
-             <button type="button" onClick={this.reset}>Reset</button>
+             <div><button type="button" onClick={this.reset}>Reset</button></div>
       </form>
       <br></br>
       <div>0-60 = {this.calculate0to60()} seconds</div>
       <div>0-100 = {this.calculate0to100()} seconds</div>
-      <div>quarter mile in the {this.quarterMile()} </div>
+      <div>quarter mile in the {this.quarterMile()}</div>
       </div>
 
     );
