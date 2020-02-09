@@ -68,7 +68,8 @@ drivetrain = (e) => {
     if(x<250) return "13's"
     if(x<340) return "12's"
     if(x<550) return "11's"
-    if(x<820) return "10's!!"
+    if(x<860) return "10's!!"
+    if(x>=860) return "less than 10 second range!!"
   }
 
   bhpPerTonne(){
