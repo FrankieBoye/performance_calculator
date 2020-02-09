@@ -10,6 +10,7 @@ class App extends Component {
   }
   this.calculate0to60 = this.calculate0to60.bind(this);
   this.calculate0to100 = this.calculate0to100.bind(this);
+  this.bhpPerTonne = this.bhpPerTonne.bind(this);
   this.reset = this.reset.bind(this);
 }
 
@@ -70,6 +71,12 @@ drivetrain = (e) => {
     if(x<820) return "10's!!"
   }
 
+  bhpPerTonne(){
+    var x = ((this.state.bhp/this.state.weight)*1000).toFixed(1)
+    if(isNaN(x)) return '---'
+    return x
+  }
+
   reset(){
     document.getElementById("calculator").reset();
     this.setState({ weight: '' })
@@ -86,7 +93,7 @@ drivetrain = (e) => {
       <input type="button" onClick={this.drivetrain} value="AWD"/>
 
      <form id ="calculator">
-        <label>weight:</label>
+        <label>weight kg:</label>
           <input type="number" value={this.state.value} onChange={this.weight} />
 
           <label>BHP:</label>
@@ -94,6 +101,7 @@ drivetrain = (e) => {
              <div><button type="button" onClick={this.reset}>Reset</button></div>
       </form>
       <br></br>
+      <div>{this.bhpPerTonne()} bhp per tonne </div>
       <div>0-60 = {this.calculate0to60()} seconds</div>
       <div>0-100 = {this.calculate0to100()} seconds</div>
       <div>quarter mile in the {this.quarterMile()}</div>
