@@ -18,18 +18,22 @@ When the app is completed, you will be able to select the driven wheels for your
 
 Work in progress!
 
-![image](https://user-images.githubusercontent.com/44870179/73846707-e1097900-481c-11ea-84d1-dec2270a987b.png)
+![image](https://user-images.githubusercontent.com/44870179/74101562-18d13300-4b33-11ea-8730-0629a8fb8724.png)
+
 
 #### Update
 
 I have met my MVP and can calculate the required figures.
 
 There is still plenty of work to do.<br>
-1. Tests have to be written for the code.
 
-2. I need to clarify the meanings of 'RWD' (rear wheel drive), 'FWD' (front wheel drive) and 'AWD' (all wheel drive) on the app. I may break that down further still as there is RR (rear engine rear wheel drive) and FR (front engine rear wheel drive) for example which will have a bearing on the performance times.
+1. User stories are still to be written to explain the reason for the application.
 
-3. Formatting, fonts and general styling need refinement.
+2. Tests have to be written for the code.
+
+3. I need to clarify the meanings of 'RWD' (rear wheel drive), 'FWD' (front wheel drive) and 'AWD' (all wheel drive) on the app. I may break that down further still as there is RR (rear engine rear wheel drive) and FR (front engine rear wheel drive) for example which will have a bearing on the performance times.
+
+4. Formatting, fonts and general styling need refinement.
 
 ## Deployment
 
