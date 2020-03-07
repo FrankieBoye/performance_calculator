@@ -6,4 +6,11 @@ describe('Performance Calculator', function() {
   it('contains "Performance Calculator" in the title', function() {
     cy.contains("Performance Calculator")
   })
+
+  it('has a visible Reset button', function() {
+    cy.get("button")
+    .should('be.visible')
+    .should('contain', 'Reset')
+  })
+
 })
