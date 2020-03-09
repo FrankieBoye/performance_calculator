@@ -20,6 +20,8 @@ Cypress end-to-end tests can be run using the following when in the project dire
 
 node_modules/.bin/cypress open
 
+![image](https://user-images.githubusercontent.com/44870179/76213877-85f3e900-6203-11ea-9fdf-3115c911abcd.png)
+
 (in progress)
 
 ## Usage
