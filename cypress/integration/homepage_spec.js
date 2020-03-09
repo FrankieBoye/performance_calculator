@@ -13,4 +13,9 @@ describe('Performance Calculator', function() {
     .should('contain', 'Reset')
   })
 
+  it('has visible RWD, FWD and AWD buttons', function() {
+    cy.get('input[type=button]')
+    .should('be.visible')
+  })
+
 })
